@@ -1,16 +1,7 @@
-<!--
-  Rui Santos
-  Complete project details at https://RandomNerdTutorials.com/esp32-web-bluetooth/
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files.
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-  With CSS
--->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ESP32 Web BLE App</title>
+    <title>PMR446 Web BLE App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -18,42 +9,38 @@
 </head>
 <body>
     <div class="topnav">
-        <h1>ESP32 Web BLE Application</h1>
+        <h1>PMR446 Web BLE Application</h1>
     </div>
     <div class="content">
         <div class="card-grid">
             <div class="card">
                 <p>
-                    <button id="connectBleButton" class="connectButton"> Connect to BLE Device</button>
-                    <button id="disconnectBleButton" class="disconnectButton"> Disconnect BLE Device</button>
+                    <button id="connectBleButton" class="connectButton"> Connect to PMR446 BLE Device</button>
+                    <button id="disconnectBleButton" class="disconnectButton"> Disconnect PMR446 BLE Device</button>
                 </p>
-                <p class="gray-label">BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
+                <p class="gray-label">PMR446 BLE state: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
             </div>
         </div>
         <div class="card-grid">
             <div class="card">
-                <h2>Fetched Value</h2>
+                <h2>Keep Alive</h2>
                 <p class="reading"><span id="valueContainer">NaN</span></p>
-                <p class="gray-label">Last reading: <span id="timestamp"></span></p>
+                <p class="gray-label">Last received: <span id="timestamp"></span></p>
             </div>
 
             <div class="card">
-                <h2>Control GPIO</h2>
-                <button id="onButton10" class="onButton">ON10</button>
-                <button id="onButton3" class="onButton">ON3</button>
-                <button id="onButton4" class="onButton">ON4</button></p>
-                <button id="onButton5" class="onButton">ON5</button>
-                <button id="onButton6" class="onButton">ON6</button>
-                <button id="onButton7" class="onButton">ON7</button>
+                <h2>PMR446 Buttons</h2>
+                <button id="onButton10" class="onButton">Power 10</button>
+                <button id="onButton3" class="onButton">Menu 3</button>
+                <button id="onButton4" class="onButton">Call 4</button></p>
+                <button id="onButton5" class="onButton">PTT 5</button>
+                <button id="onButton6" class="onButton">UP 6</button>
+                <button id="onButton7" class="onButton">DOWN 7</button>
                 <p class="gray-label">Last value sent: <span id="valueSent"></span></p>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p><a href="https://randomnerdtutorials.com/">Created by RandomNerdTutorials.com</a></p>
-        <p><a href="https://RandomNerdTutorials.com/esp32-web-bluetooth/">Read the full project here.</a></p>
-    </div>
-</body>
+ </body>
 <script>
     // DOM Elements
     const connectButton = document.getElementById('connectBleButton');
