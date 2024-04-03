@@ -20,7 +20,7 @@ body {
 .card-grid {
     max-width: 700px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -52,6 +52,10 @@ button {
 
 .disconnectButton{
     background-color: #d13a30;
+}
+
+.pttButton{
+    background-color: #1b0af2;
 }
 
 .gray-label {
