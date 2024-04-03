@@ -12,16 +12,7 @@
         <h1>PMR446 Web BLE</h1>
     </div>
     <div class="content">
-        <div class="card-grid">
-            <div class="card">
-                <p>
-                    <button id="connectBleButton" class="connectButton"> Connect</button></p>
-                    <button id="disconnectBleButton" class="disconnectButton"> Disconnect</button>
-                </p>
-                <p class="gray-label">State: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
-            </div>
-        </div>
-        <div class="card-grid">
+         <div class="card-grid">
 
             <div class="card">
                 <h2>PMR446 Buttons</h2>
@@ -35,6 +26,17 @@
             </div>
 			        
 		</div>
+		
+		<div class="card-grid">
+            <div class="card">
+                <p>
+                    <button id="connectBleButton" class="connectButton"> Connect</button>
+                    <button id="disconnectBleButton" class="disconnectButton"> Disconnect</button>
+                </p>
+                <p class="gray-label">State: <strong><span id="bleState" style="color:#d13a30;">Disconnected</span></strong></p>
+            </div>
+        </div>
+
 		
         <div class="card-grid">
 			
@@ -86,7 +88,7 @@
 
     // Write to the ESP32 LED Characteristic
     onButton10.addEventListener('click', () => writeOnCharacteristic(1));
-    // onButton10.addEventListener('mouseup', () => writeOnCharacteristic(0));
+    //onButton10.addEventListener('mouseup', () => writeOnCharacteristic(0));
     onButton3.addEventListener('click', () => writeOnCharacteristic(3));
     onButton4.addEventListener('click', () => writeOnCharacteristic(4));
     onButton5.addEventListener('click', () => writeOnCharacteristic(5));
