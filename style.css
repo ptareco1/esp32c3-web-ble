@@ -36,6 +36,12 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
   /* Style the button */
@@ -54,13 +60,11 @@ button {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-
   }
   /* Style the button when pressed */
   .ptt-button:active {
     background-color: #409540;
   }
-
 
 .onButton{
     background-color: #1b8a94;
@@ -76,10 +80,6 @@ button {
 
 .disconnectButton{
     background-color: #d13a30;
-}
-
-.pttButton{
-    background-color: #24af37;
 }
 
 .gray-label {
