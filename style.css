@@ -38,6 +38,23 @@ button {
     border-radius: 4px;
 }
 
+  /* Style the button */
+  .ptt-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  /* Style the button when pressed */
+  .ptt-button:active {
+    background-color: #409540;
+  }
+
+
 .onButton{
     background-color: #1b8a94;
 }
