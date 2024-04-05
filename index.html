@@ -13,17 +13,15 @@
     </div>
     <div class="content">
          <div class="card-grid">
-
             <div class="card">
                 <button id="onButton10" class="onButton">POWER 10</button></p>
                 <button id="onButton3" class="onButton">MENU 3</button>
                 <button id="onButton4" class="onButton">CALL 4</button></p>
-                <button id="onButton5" class="pttButton">## PTT 10 ## 5</button></p>
+                <button id="onButton5" class="ptt-button">Push to Talk 5</button></p>
                 <button id="onButton6" class="onButton">DOWN 6</button>
                 <button id="onButton7" class="onButton">UP 7</button>
                 <p class="gray-label">Last value sent: <span id="valueSent"></span></p>
             </div>
-			        
 		</div>
 		
 		<div class="card-grid">
@@ -77,8 +75,11 @@
     disconnectButton.addEventListener('click', disconnectDevice);
 
     // Write to the ESP32 LED Characteristic
-    onButton10.addEventListener('click', () => writeOnCharacteristic(1));
-    //onButton10.addEventListener('mouseup', () => writeOnCharacteristic(0));
+    //onButton10.addEventListener('click', () => writeOnCharacteristic(1));
+    onButton10.addEventListener('mousedown', () => writeOnCharacteristic(1));
+    onButton10.addEventListener('mouseup', () => writeOnCharacteristic(0));
+    onButton10.addEventListener('touchstart', () => writeOnCharacteristic(1));
+    onButton10.addEventListener('touchend', () => writeOnCharacteristic(0));
     onButton3.addEventListener('click', () => writeOnCharacteristic(3));
     onButton4.addEventListener('click', () => writeOnCharacteristic(4));
     onButton5.addEventListener('click', () => writeOnCharacteristic(5));
